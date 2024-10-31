@@ -14,6 +14,7 @@ const SellActionWindow = ({ uid }) => {
   const context = useContext(GeneralContext); // Use context to access close function
 
   const handleSellClick = () => {
+    console.log("Selling stock:", { uid, stockQuantity, stockPrice });
     axios.post("https://backend-my-project.onrender.com/newOrder", {
       name: uid,
       qty: stockQuantity,
